@@ -7,7 +7,7 @@
 * сервис лицензий хранит данные лицензий и проверяет лицензию пользователя при отправке запросов пользователя
 * сервис отчетов хранит данные по всем отчетам в базе
 
-#### Стек:
+#### Дочерние проекты:
 * https://github.com/MOSTDORGEOTREST/report_autification_backend
 * https://github.com/MOSTDORGEOTREST/report_autification_front
 
