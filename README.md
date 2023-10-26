@@ -6,6 +6,12 @@
 * https://github.com/MOSTDORGEOTREST/report_autification_backend
 * https://github.com/MOSTDORGEOTREST/report_autification_front
 
+#### Структура папок:
+    /${MAIN_PATH}/
+    ├───report_autification_backend/
+    ├───report_autification_front/
+    └───report_autification_meta/
+
 ## Для разработки:
 1. Скопировать файл .env в корень проекта
     
