@@ -28,8 +28,6 @@ services:
       - AWS_BUCKET=${AWS_BUCKET}
       - FILE_COUNT=5
       - FILE_SIZE=10
-    networks:
-      - app-network
     restart: always
     ports:
       - "8000:8000"
@@ -48,10 +46,8 @@ services:
       - REACT_APP_TEST=TEST
       - REACT_APP_SERVER_IP=http://localhost/api/
       - DISABLE_ESLINT_PLUGIN=true npm start
-    networks:
-      - app-network
     ports:
-      - "8000:8000"
+      - "9000:9000"
     restart: unless-stopped
     volumes:
       - /etc/timezone:/etc/timezone:ro
@@ -62,12 +58,7 @@ services:
     image: nginx
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
-    networks:
-      - app-network
     ports:
       - "80:80"
 
-networks:
-  app-network:
-    driver: bridge
 
