@@ -42,7 +42,7 @@ services:
     container_name: nodejs
     environment:
       - REACT_APP_TEST=TEST
-      - REACT_APP_SERVER_IP=http://web:8000/
+      - REACT_APP_SERVER_IP=http://89.223.65.190:8000/
     ports:
       - "80:80"
     restart: unless-stopped
