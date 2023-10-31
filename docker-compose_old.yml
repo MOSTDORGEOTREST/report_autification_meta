@@ -55,6 +55,16 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
 
+  server:
+    restart: always
+    image: nginx
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    networks:
+      - app-network
+    ports:
+      - "80:80"
+
 networks:
   app-network:
     driver: bridge
