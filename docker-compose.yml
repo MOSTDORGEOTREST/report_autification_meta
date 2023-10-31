@@ -51,11 +51,21 @@ services:
     networks:
       - app-network
     ports:
-      - "3000:3000"
+      - "8000:8000"
     restart: unless-stopped
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
+
+  server:
+    restart: always
+    image: nginx
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    networks:
+      - app-network
+    ports:
+      - "80:80"
 
 networks:
   app-network:
