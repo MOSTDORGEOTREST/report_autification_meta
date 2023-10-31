@@ -50,6 +50,8 @@ services:
       - DISABLE_ESLINT_PLUGIN=true npm start
     networks:
       - app-network
+    ports:
+      - "3000:3000"
     restart: unless-stopped
     volumes:
       - /etc/timezone:/etc/timezone:ro
