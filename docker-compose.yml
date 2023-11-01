@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.5'
 services:
   redis:
     image: "redis:alpine"
@@ -44,7 +44,7 @@ services:
     container_name: nodejs
     environment:
       - REACT_APP_TEST=TEST
-      - REACT_APP_SERVER_IP=http://localhost/api/
+      - REACT_APP_SERVER_IP=http://web:8000/
       - DISABLE_ESLINT_PLUGIN=true npm start
     ports:
       - "9000:9000"
