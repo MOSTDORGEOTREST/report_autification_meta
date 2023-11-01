@@ -9,8 +9,6 @@ services:
     restart: always
     environment:
       - REDIS_REPLICATION_MODE=master
-    networks:
-      - app-network
 
   backend:
     build: ${MAIN_PATH}report_autification_backend/src
