@@ -11,7 +11,7 @@ services:
       - REDIS_REPLICATION_MODE=master
 
   backend:
-    build: ${MAIN_PATH}report_autification_backend
+    build: ${MAIN_PATH}report_autification_backend/src
     container_name: backend
     command: bash -c 'uvicorn main:app --host 0.0.0.0'
     environment:
