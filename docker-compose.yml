@@ -3,7 +3,7 @@ services:
   redis:
     image: "redis:alpine"
     expose:
-        - 6379
+      - 6379
     ports:
       - "6379:6379"
     restart: always
@@ -43,7 +43,7 @@ services:
     container_name: frontend
     environment:
       - REACT_APP_SERVER_IP=http://localhost:8000/
-      - DISABLE_ESLINT_PLUGIN=true npm start
+      - DISABLE_ESLINT_PLUGIN=true
     ports:
       - 3000:3000
     restart: unless-stopped
@@ -69,4 +69,3 @@ services:
     depends_on:
       - backend
       - frontend
-
