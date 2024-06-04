@@ -1,3 +1,5 @@
+**/key.key
+**/crt.crt
 **/.env
 **/venv
 **/env.txt
